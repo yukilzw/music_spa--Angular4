@@ -7,8 +7,11 @@ export class MyService {
 
     ) { }
 
-  getHeroes() {
-    
-    return 1;
+  Param(obj: Object) {
+    let arr : Array<any>;
+    for(var k in obj){
+        arr.push(k+'='+encodeURI(obj[k] instanceof Object ? JSON.stringify(obj[k]) : obj[k]));
+    }
+    return arr.join('&')
   }
 }
