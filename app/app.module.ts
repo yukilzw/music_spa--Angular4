@@ -4,13 +4,17 @@ import { NgModule }     from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { FirstComponent } from './1-component';
+import { Component_1 } from './1-component';
+import { Component_2 } from './2-component';
 
 import { MyService }  from './my-service';
 
 const appRoutes: Routes = [
-  { path: 'heroes', 
-    component: FirstComponent
+  { path: '1', 
+    component: Component_1
+  },
+  { path: '2', 
+    component: Component_2
   }
 ];
 
@@ -25,7 +29,8 @@ const appRoutes: Routes = [
   ],
   declarations: [
     AppComponent,
-    FirstComponent
+    Component_1,
+    Component_2
   ],
   providers: [
     MyService

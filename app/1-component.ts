@@ -7,4 +7,4 @@ import '../css/style.css';
   templateUrl: './1-component.html',
   styleUrls: ['./1-component.css']
 })
-export class FirstComponent { } 
+export class Component_1 { } 
