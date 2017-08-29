@@ -1,5 +1,6 @@
 import { BrowserModule }       from '@angular/platform-browser';
-import { FormsModule }         from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//import { FormsModule }         from '@angular/forms';
 import { NgModule }     from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -10,11 +11,14 @@ import { Component_2 } from './2-component';
 import { MyService }  from './my-service';
 
 const appRoutes: Routes = [
+  { path: '', redirectTo: '1',pathMatch: 'full'},
   { path: '1', 
-    component: Component_1
+    component: Component_1,
+    data: { state: '1' }
   },
   { path: '2', 
-    component: Component_2
+    component: Component_2,
+    data: { state: '2' }
   }
 ];
 
@@ -22,10 +26,11 @@ const appRoutes: Routes = [
   imports: [
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true,useHash: true } // <-- debugging purposes only 
+      { enableTracing: false,useHash: true } // <-- debugging purposes only 
     ),
     BrowserModule,
-    FormsModule
+    BrowserAnimationsModule,
+    //FormsModule
   ],
   declarations: [
     AppComponent,

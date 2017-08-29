@@ -9,7 +9,7 @@ export class MyService {
 
   Param(obj: Object) {
     let arr : Array<any>;
-    for(var k in obj){
+    for(let k in obj){
         arr.push(k+'='+encodeURI(obj[k] instanceof Object ? JSON.stringify(obj[k]) : obj[k]));
     }
     return arr.join('&')
