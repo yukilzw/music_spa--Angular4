@@ -1,0 +1,22 @@
+<div id="alert-shade" [attr.type]="types">
+    <div id="alert">
+        <div id="alert-content">
+            <h3>{{title ? title : "提示"}}</h3>
+            <p id="pContent" *ngIf="pContent">{{pContent}}</p>
+            <div id="docChoose" *ngIf="docChoose">
+                <p id="price">￥30.00/<span>次</span></p>
+                <p id="name">咨询师-刘占威</p>
+                <p id="type">通过文字、图片进行咨询</p>
+                <div id="xieyi" class="clearfix">
+                    <div id="agree-click" (click)="agreement()"></div>
+                    <a id="agree" [class.active]="isAgree"></a>
+                    <p><span>同意</span>《同济医院在线问诊用户协议》</p>
+                </div>
+            </div>
+        </div>
+        <ul id="alert-choose" class="clearfix">
+            <li id="alert-no" (click)="no()">取消</li>
+            <li id="alert-yes" (click)="yes()">确认</li>
+        </ul>
+    </div>
+</div>

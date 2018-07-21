@@ -1,0 +1,5 @@
+.scroll-wrapper{width:3.75rem;background-color: #fff;bottom: 0}
+.wrapper-1{left: 0}
+.wrapper-2{right: 0}
+li{line-height: .88rem;text-indent: .32rem;font-size: .3rem;}
+.wrapper-2 li{border-bottom: 1px solid #eaecf1}

@@ -1,0 +1,36 @@
+<div class="page">
+    <div class="doc-h-wrap clearfix">
+        <div id="choose-dept-btn" (click)="showDeptList()" [class.active]="shadeShow">外科</div>
+        <div id="change-state" [class.active]="docServe">在线医生<span (click)="changeDocServe()"><b></b></span></div>
+        <div id="search-doc" (click)="getSearch()" [class.active]="getSearchInput">
+            <div id="search-icon" (click)="searchDoc()"></div>
+            <span>搜索</span>
+            <input placeholder="请输入要查找的医生姓名" #docInput [(ngModel)]="searchText"/>
+            <div id="search-hide" (click)="hideSearch($event)"></div>
+        </div>
+    </div>
+    <div class="scroll-wrapper wrapper-1">
+        <ul class="scroll">
+            <li class="doc-wrap clearfix" *ngFor="let obj of deptData;let i =index" (click)="toDocDetail()">
+                <div class="doc-img"></div>
+                <div class="doc-inf">
+                    <h4>刘占威<span class="is-serve">接诊中</span></h4>
+                    <h4 class="i-1">内科 / 主治医师</h4>
+                    <p class="inf-p">擅长：哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+                    <p class="inf-p">平均回复时长：<span>49</span>分钟</p>
+                </div>
+                <div class="doc-inf-2 clearfix">
+                    <p><span>206</span>人咨询过</p>
+                    <p><span>206</span>评论</p>
+                    <p><span>6</span>人等候</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <footer>
+        技术支持：copyright © 深圳医依帮网络技术有限公司
+    </footer>
+    <div class="wrap-shade" *ngIf="shadeShow" [@shade]>
+        <s-departList [parentBox]="'p-docList'"></s-departList>
+    </div>
+</div>

@@ -1,0 +1,80 @@
+<div class="page">
+    <div class="scroll-wrapper wrapper-1">
+        <div class="scroll">
+            <div class="doc-wrap clearfix" id="doc-dd">
+                <div class="doc-img"></div>
+                <div class="doc-inf">
+                    <h4>刘占威<span class="is-serve">接诊中</span></h4>
+                    <h4 class="i-1">内科 / 主治医师</h4>
+                    <h4 class="i-1">在线时间：<span>16:00~22:00</span></h4>
+                    <a [class.active]="isAttention">关注</a>
+                </div>
+            </div>
+            <div class="doc-wrap clearfix" id="notice">
+                重要通知：2018年1月23日郑重开启上线！
+            </div>
+            <ul class="doc-wrap clearfix" id="ask-way">
+                <li class="ask-way active" (click)="alertShade()">
+                    <p>图文咨询</p>
+                    <span>30.00元/次</span>
+                </li>
+                <li class="ask-way">
+                    <p>图文咨询</p>
+                    <span>30.00元/次</span>
+                </li>
+                <li class="ask-way">
+                    <p>图文咨询</p>
+                    <span>30.00元/次</span>
+                </li>
+            </ul>
+            <div class="doc-wrap clearfix" id="job-inf">
+                <h3>擅长</h3>
+                <p>擅长冠心病、脑血管病等常见内科病的中西医结合治疗，擅长运用中药结合针灸治疗脑血管病后遗症。</p>
+                <h3>简介</h3>
+                <p>从事临床内科工作10余年，曾在齐鲁医院进修1年，擅长冠心病、脑血管病等常见内科病的中西医结合治疗，擅长运用中药结合针灸治疗脑血管病后遗症。</p>
+            </div>
+            <div class="doc-wrap clearfix" id="assess">
+                <h3>咨询评论<span>(803)</span></h3>
+                <ul id="as-wrap">
+                    <li>
+                        <p class="name">刘占威</p>
+                        <p class="content">我觉得你说的很对！</p>
+                        <p class="time">2017-12-29</p>
+                        <ul class="point clearfix">
+                            <li></li><li></li><li></li><li></li><li></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="name">刘占威</p>
+                        <p class="content">我觉得你说的很对！</p>
+                        <p class="time">2017-12-29</p>
+                        <ul class="point clearfix">
+                            <li></li><li></li><li></li><li></li><li></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="name">刘占威</p>
+                        <p class="content">我觉得你说的很对！</p>
+                        <p class="time">2017-12-29</p>
+                        <ul class="point clearfix">
+                            <li></li><li></li><li></li><li></li><li></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="name">刘占威</p>
+                        <p class="content">我觉得你说的很对！</p>
+                        <p class="time">2017-12-29</p>
+                        <ul class="point clearfix">
+                            <li></li><li></li><li>
+                        </ul>
+                    </li>
+                    <p id="no-more-as">没有更多评论了~</p>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        技术支持：copyright © 深圳医依帮网络技术有限公司
+    </footer>
+    <s-alert [@alert] *ngIf="isAlertShow" [types]="'confirm'" [title]="'图文咨询'" [docChoose]="true"></s-alert>
+</div>

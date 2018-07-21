@@ -1,0 +1,41 @@
+<div class="page">
+<div class="scroll-wrapper">
+    <div class="scroll">
+        <img class="banner" [src]="bannerSrc"/>
+        <ul class="clearfix wrap-box">
+            <li class="dept-wrap" *ngFor="let obj of deptData;let i =index" [style.background-image]="'url('+obj.src+')'" (click)="i!=7 ? toDocList() : toDeptList()">
+                <p class="dept-name">{{ obj.name }}</p>
+            </li>
+        </ul>
+        <div class="clearfix wrap-box">
+            <span id="search-icon" (click)="searchDoc()"></span>
+            <input id="search-input" placeholder="请输入要查找的医生姓名" [(ngModel)]="docName"/>
+        </div>
+        <div class="clearfix wrap-box no-padding">
+            <div class="title-box clearfix">
+                <h3>推荐医生</h3>
+                <span (click)="toDocList()">更多</span>
+            </div>
+            <ul>
+                <li class="doc-wrap clearfix" *ngFor="let obj of deptData;let i =index" (click)="toDocDetail(obj)">
+                    <div class="doc-img"></div>
+                    <div class="doc-inf">
+                        <h4>刘占威</h4>
+                        <h4 class="i-1">内科 / 主治医师</h4>
+                        <p class="inf-p">擅长：哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+                        <p class="inf-p">平均回复时长：<span>49</span>分钟</p>
+                        <div class="doc-inf-2 clearfix">
+                            <p><span>206</span>人咨询过</p>
+                            <p><span>206</span>评论</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<footer>
+    技术支持：copyright © 深圳医依帮网络技术有限公司
+</footer>
+<s-alert [@alert] *ngIf="isAlertShow" [types]="'alert'" [pContent]="'请输入正确医生姓名'"></s-alert>
+</div>
