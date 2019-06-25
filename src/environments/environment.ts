@@ -4,6 +4,6 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-    production:false,
-    REM:document.documentElement.clientWidth/7.5 
+    production: false,
+    REM: document.documentElement.clientWidth / 7.5
 };

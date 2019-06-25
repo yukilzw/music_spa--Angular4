@@ -5,41 +5,41 @@ import {
     ActionReducer,
     MetaReducer,
 } from '@ngrx/store';
-import { environment } from '../../environments/environment'
+import { environment } from '../../environments/environment';
 
 export interface ArticleState {
-    direction ? : any;
-    routecss ? :any;
-    alertShow ? : any;
-} 
+    direction?: any;
+    routecss?: any;
+    alertShow?: any;
+}
 
-export function routecss (state:ArticleState = {direction:"right"}, action):ArticleState {
+export function routecss (state: ArticleState = {direction: 'right'}, action): ArticleState {
     switch (action.type) {
         case 'left':
-            return {direction:"left"}
+            return {direction: 'left'};
         case 'right':
-            return {direction:"right"}
+            return {direction: 'right'};
         default :
-            return state
+            return state;
     }
 }
 
-export function alertShow (state:ArticleState = new Object(), action):ArticleState {
+export function alertShow (state: ArticleState = new Object(), action): ArticleState {
     state.alertShow = false;
     switch (action.type) {
-        case "show":
-            return {alertShow:true}
-        case "hide":
-            return {alertShow:false}
+        case 'show':
+            return {alertShow: true};
+        case 'hide':
+            return {alertShow: false};
         default :
-            return state
+            return state;
     }
 }
 
 /*const getArticleState = createFeatureSelector<ArticleState>('routecss')
 
 export const getArticles = createSelector(
-    getArticleState, 
+    getArticleState,
     (state: ArticleState) => state.direction
 ); */
 
@@ -54,6 +54,6 @@ const logger = (reducer: ActionReducer<ArticleState>): ActionReducer<ArticleStat
         console.log('action', action);*/
         return reducer(state, action);
     };
-}
+};
 
-export const metaReducers: MetaReducer<ArticleState>[] = !environment.production ? [logger] : []; 
+export const metaReducers: MetaReducer<ArticleState>[] = !environment.production ? [logger] : [];

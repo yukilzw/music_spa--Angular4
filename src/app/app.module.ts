@@ -1,7 +1,7 @@
-import { BrowserModule }       from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule }         from '@angular/forms';
-import { NgModule }     from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './store/reducers';
@@ -15,31 +15,31 @@ import { p_docDetail } from './component/p-docDetail';
 import { s_departList } from './component/s-departList';
 import { s_alert } from './component/s-alert';
 
-import { common }  from './my-service';
+import { common } from './my-service';
 
 const appRoutes: Routes = [
-    { 
-        path: '', 
+    {
+        path: '',
         redirectTo: 'ng-app/p-askDoctor',
         pathMatch: 'full'
     },
-    { 
-        path: 'ng-app/p-askDoctor', 
+    {
+        path: 'ng-app/p-askDoctor',
         component: p_askDoctor,
         data: { state: '1' }
     },
-    { 
-        path: 'ng-app/p-deptList', 
+    {
+        path: 'ng-app/p-deptList',
         component: p_deptList,
         data: { state: '2' }
     },
-    { 
-        path: 'ng-app/p-docList', 
+    {
+        path: 'ng-app/p-docList',
         component: p_docList,
         data: { state: '3' }
     },
-    { 
-        path: 'ng-app/p-docDetail', 
+    {
+        path: 'ng-app/p-docDetail',
         component: p_docDetail,
         data: { state: '4' }
     },
@@ -47,7 +47,7 @@ const appRoutes: Routes = [
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(appRoutes,{ useHash: true }),
+        RouterModule.forRoot(appRoutes, { useHash: true }),
         BrowserModule,
         BrowserAnimationsModule,
         FormsModule,

@@ -9,7 +9,7 @@ export class pageBack implements Action {
 }
 
 export class alertShow implements Action {
-    readonly type = "show";
+    readonly type = 'show';
 }
 
 export class alertHide implements Action {

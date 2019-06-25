@@ -60,8 +60,8 @@ import 'core-js/es7/reflect';
 import 'zone.js/dist/zone';  // Included with Angular CLI.
 import '@angular/platform-browser-dynamic';
 import '@angular/core';
-//import '@angular/common';
-//import '@angular/http';
+// import '@angular/common';
+// import '@angular/http';
 import '@angular/router';
 import '@angular/animations';
 import '@angular/forms';
